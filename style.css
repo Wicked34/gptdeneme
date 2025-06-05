@@ -7,6 +7,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    touch-action: manipulation;
 }
 #game {
     text-align: center;
@@ -20,6 +21,7 @@ body {
     color: #fff;
     font-size: 18px;
     cursor: pointer;
+    touch-action: manipulation;
     animation: pulse 1.5s infinite;
 }
 .progress {
@@ -40,4 +42,18 @@ body {
     0% { transform: scale(1); }
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+    #energy-button {
+        width: 60vw;
+        height: 60vw;
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .progress {
+        width: 80vw;
+        max-width: 250px;
+    }
 }
