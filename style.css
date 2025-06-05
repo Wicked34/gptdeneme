@@ -1,0 +1,52 @@
+body {
+    background: #121212;
+    color: #eee;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+#game {
+    text-align: center;
+}
+#energy-button {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: none;
+    background: #444;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    animation: pulse 1.5s infinite;
+}
+.progress {
+    background: #333;
+    width: 200px;
+    height: 10px;
+    margin: 4px auto;
+}
+.bar {
+    background: #0f0;
+    height: 100%;
+    width: 0%;
+}
+.tier {
+    margin: 10px 0;
+}
+
+.tier.flash {
+    animation: flash 0.4s;
+}
+
+@keyframes flash {
+    from { background: #555; }
+    to { background: transparent; }
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
